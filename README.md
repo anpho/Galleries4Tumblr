@@ -1,0 +1,1 @@
+[ISSUES](https://github.com/bbdev-cn/wallpapers/issues)
