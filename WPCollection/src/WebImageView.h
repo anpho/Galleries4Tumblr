@@ -46,6 +46,7 @@ signals:
     void urlChanged();
     void loadingChanged();
     void loadComplete();
+    void cancel();
 };
 
 #endif /* WEBIMAGEVIEW_H_ */

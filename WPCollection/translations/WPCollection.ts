@@ -194,6 +194,16 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../assets/about.qml" line="115"/>
+        <source>Tumblr is an user-generated community, make sure you&apos;re above 18 when adding NSFW galleries. This app can&apos;t figure out how old you are or is it illegal for you to browser certain galleries.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/about.qml" line="15"/>
+        <source>Feedback</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../assets/about.qml" line="62"/>
         <source>Free version has these limits:
 - Can only view about 40 images of each gallery.
@@ -202,16 +212,6 @@ Unlocked version benifits:
 - View all images in gallery
 - Add customized tumblr sites to My Galleries with / without GIF enabled.
 - Import / Export My Galleries, share with your friends.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../assets/about.qml" line="115"/>
-        <source>Tumblr is an user-generated community, make sure you&apos;re above 18 when adding NSFW galleries. This app can&apos;t figure out how old you are or is it illegal for you to browser certain galleries.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../assets/about.qml" line="15"/>
-        <source>Feedback</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -381,77 +381,102 @@ Unlocked version benifits:
 <context>
     <name>settings</name>
     <message>
-        <location filename="../assets/settings.qml" line="20"/>
+        <location filename="../assets/settings.qml" line="22"/>
         <source>THEME SETTINGS</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/settings.qml" line="33"/>
+        <location filename="../assets/settings.qml" line="35"/>
         <source>Use Dark Theme</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/settings.qml" line="60"/>
+        <location filename="../assets/settings.qml" line="62"/>
         <source>This will be applied immediately.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/settings.qml" line="65"/>
+        <location filename="../assets/settings.qml" line="67"/>
         <source>UI SETTINGS</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/settings.qml" line="74"/>
+        <location filename="../assets/settings.qml" line="76"/>
         <source>Columns in a gallery view.Default number is 4, which looks like below:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/settings.qml" line="102"/>
+        <location filename="../assets/settings.qml" line="104"/>
         <source>%1 columns</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/settings.qml" line="108"/>
+        <location filename="../assets/settings.qml" line="110"/>
         <source>Each web request will fetch %1 images from gallery.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/settings.qml" line="113"/>
+        <location filename="../assets/settings.qml" line="115"/>
         <source>Please note that in FREE version, this app will send ONE request for each gallery only, UNLOCKED version has no limitation and can browse all images in gallery.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/settings.qml" line="129"/>
+        <location filename="../assets/settings.qml" line="121"/>
+        <source>CACHE MANAGEMENT</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/settings.qml" line="134"/>
+        <source>This app will automatically cache images, if you want to clear all the caches now, press this button below.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/settings.qml" line="142"/>
+        <source>CLEAR CACHE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/settings.qml" line="145"/>
+        <source>Cache cleared.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/settings.qml" line="166"/>
         <source>Features in UNLOCKED version:
 - My Sites ( add your customized tumblr sites, import / export them, and share with your friends.
 - View all images in gallery instead of only latest 50.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/settings.qml" line="149"/>
+        <location filename="../assets/settings.qml" line="175"/>
+        <source>UNLOCK</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/settings.qml" line="177"/>
+        <source>Processing...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/settings.qml" line="194"/>
         <source>You&apos;ve unlocked all the features, thank you!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/settings.qml" line="119"/>
+        <location filename="../assets/settings.qml" line="156"/>
         <source>UNLOCK FREATURES</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../assets/settings.qml" line="138"/>
-        <source>Unlock</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>unlock</name>
     <message>
-        <location filename="../assets/unlock.qml" line="39"/>
+        <location filename="../assets/unlock.qml" line="44"/>
         <source>Unlock with BlackBerry World Payment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/unlock.qml" line="48"/>
+        <location filename="../assets/unlock.qml" line="53"/>
         <source>Free version has these limits:
 - Can only view about 40 images of each gallery.
 - My Galleries is disabled.
@@ -462,27 +487,27 @@ Unlocked version benifits:
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/unlock.qml" line="65"/>
+        <location filename="../assets/unlock.qml" line="70"/>
         <source>Payment status:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/unlock.qml" line="71"/>
+        <location filename="../assets/unlock.qml" line="76"/>
         <source>Purchased</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/unlock.qml" line="77"/>
+        <location filename="../assets/unlock.qml" line="82"/>
         <source>Not Purchased</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/unlock.qml" line="82"/>
+        <location filename="../assets/unlock.qml" line="87"/>
         <source>Contacting BlackBerry World</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/unlock.qml" line="104"/>
+        <location filename="../assets/unlock.qml" line="109"/>
         <source>Purchase</source>
         <translation type="unfinished"></translation>
     </message>

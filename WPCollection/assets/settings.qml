@@ -1,5 +1,7 @@
 import bb.cascades 1.4
 import bb.device 1.4
+import org.labsquare 1.0
+import bb.system 1.2
 Page {
     attachedObjects: [
         DisplayInfo {
@@ -116,6 +118,41 @@ Page {
                 }
             }
             Header {
+                title: qsTr("CACHE MANAGEMENT")
+            }
+            Container {
+                topPadding: 10.0
+                bottomPadding: 10.0
+                leftPadding: 20.0
+                rightPadding: 20.0
+                horizontalAlignment: HorizontalAlignment.Fill
+                WebImageView {
+                    id: wi
+                    visible: false
+                }
+                Label {
+                    text: qsTr("This app will automatically cache images, if you want to clear all the caches now, press this button below.")
+                    multiline: true
+                    textStyle.fontWeight: FontWeight.W100
+
+                }
+                Button {
+                    horizontalAlignment: HorizontalAlignment.Center
+                    color: Color.DarkGreen
+                    text: qsTr("CLEAR CACHE")
+                    onClicked: {
+                        wi.clearCache();
+                        sst.body = qsTr("Cache cleared.")
+                        sst.show();
+                    }
+                    attachedObjects: [
+                        SystemToast {
+                            id: sst
+                        }
+                    ]
+                }
+            }
+            Header {
                 title: qsTr("UNLOCK FREATURES")
             }
             Container {
@@ -135,12 +172,20 @@ Page {
             Button {
                 visible: ! unlocked
                 horizontalAlignment: HorizontalAlignment.Center
-                text: qsTr("Unlock")
+                text: qsTr("UNLOCK")
                 onClicked: {
+                    sstoast.body = qsTr("Processing...")
+                    sstoast.show();
                     var unlockpage = Qt.createComponent("unlock.qml").createObject(navroot);
                     navroot.push(unlockpage);
                 }
+                attachedObjects: [
+                    SystemToast {
+                        id: sstoast
+                    }
+                ]
                 id: button_unlock
+                color: Color.DarkCyan
             }
             Container {
                 visible: ! button_unlock.visible
@@ -154,7 +199,7 @@ Page {
                 }
             }
             Divider {
-                
+
             }
         }
     }
