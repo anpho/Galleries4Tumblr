@@ -59,6 +59,8 @@ config_pri_assets {
         $$quote($$BASEDIR/assets/images/GIF_OFF.png) \
         $$quote($$BASEDIR/assets/images/GIF_ON.png) \
         $$quote($$BASEDIR/assets/images/columns.png) \
+        $$quote($$BASEDIR/assets/images/def.png) \
+        $$quote($$BASEDIR/assets/images/loading.gif) \
         $$quote($$BASEDIR/assets/main.qml) \
         $$quote($$BASEDIR/assets/settings.qml) \
         $$quote($$BASEDIR/assets/tumblr.xml) \

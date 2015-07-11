@@ -1,5 +1,5 @@
 1
-18
+20
 icon/icon.png
 icon/ic_add.png
 icon/ic_add_bookmarks.png
@@ -15,6 +15,8 @@ icon/ic_set_as_default.png
 icon/ic_share.png
 icon/ic_view_image.png
 images/columns.png
+images/def.png
 images/GIF_OFF.png
 images/GIF_ON.png
+images/loading.gif
 tumblr.xml

@@ -77,13 +77,18 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/AlbumViewer.qml" line="108"/>
+        <location filename="../assets/AlbumViewer.qml" line="107"/>
         <source>Host unreachable, please check your Internet connection and try again. </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/AlbumViewer.qml" line="117"/>
+        <location filename="../assets/AlbumViewer.qml" line="116"/>
         <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/AlbumViewer.qml" line="127"/>
+        <source>Retry</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -100,17 +105,17 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/Common.qml" line="77"/>
+        <location filename="../assets/Common.qml" line="79"/>
         <source>Invalid API result</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/Common.qml" line="80"/>
+        <location filename="../assets/Common.qml" line="82"/>
         <source>Network error.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/Common.qml" line="98"/>
+        <location filename="../assets/Common.qml" line="100"/>
         <source>Just now</source>
         <translation type="unfinished"></translation>
     </message>
@@ -243,12 +248,12 @@ Unlocked version benifits:
 <context>
     <name>main</name>
     <message>
-        <location filename="../assets/main.qml" line="82"/>
+        <location filename="../assets/main.qml" line="83"/>
         <source>Default</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="86"/>
+        <location filename="../assets/main.qml" line="87"/>
         <source>Favourite</source>
         <translation type="unfinished"></translation>
     </message>
@@ -258,122 +263,108 @@ Unlocked version benifits:
         <translation></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="90"/>
-        <location filename="../assets/main.qml" line="433"/>
-        <location filename="../assets/main.qml" line="531"/>
+        <location filename="../assets/main.qml" line="91"/>
+        <location filename="../assets/main.qml" line="506"/>
+        <location filename="../assets/main.qml" line="628"/>
         <source>My Galleries</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="113"/>
+        <location filename="../assets/main.qml" line="114"/>
         <source>Add Gallery</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="124"/>
+        <location filename="../assets/main.qml" line="125"/>
         <source>Import</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="139"/>
+        <location filename="../assets/main.qml" line="140"/>
         <source>Pick a file to import</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="141"/>
-        <location filename="../assets/main.qml" line="184"/>
+        <location filename="../assets/main.qml" line="142"/>
+        <location filename="../assets/main.qml" line="185"/>
         <source>Unknown error : %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="169"/>
-        <location filename="../assets/main.qml" line="182"/>
+        <location filename="../assets/main.qml" line="170"/>
+        <location filename="../assets/main.qml" line="183"/>
         <source>Export</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="197"/>
+        <location filename="../assets/main.qml" line="198"/>
         <source>Data exported successfully.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="200"/>
+        <location filename="../assets/main.qml" line="201"/>
         <source>Data export error, please ensure &quot;Shared Files&quot; permission is granted.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="250"/>
-        <location filename="../assets/main.qml" line="383"/>
-        <location filename="../assets/main.qml" line="522"/>
-        <source>Updated %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../assets/main.qml" line="268"/>
+        <location filename="../assets/main.qml" line="293"/>
         <source>Add to Favourite</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="292"/>
+        <location filename="../assets/main.qml" line="329"/>
         <source>My Favourites</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="326"/>
-        <location filename="../assets/main.qml" line="466"/>
+        <location filename="../assets/main.qml" line="363"/>
+        <location filename="../assets/main.qml" line="539"/>
         <source> galleries selected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="328"/>
-        <location filename="../assets/main.qml" line="468"/>
+        <location filename="../assets/main.qml" line="365"/>
+        <location filename="../assets/main.qml" line="541"/>
         <source>1 gallery selected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="337"/>
+        <location filename="../assets/main.qml" line="374"/>
         <source>%1 added to Favourites.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="392"/>
+        <location filename="../assets/main.qml" line="453"/>
         <source>My Favourite</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="315"/>
-        <location filename="../assets/main.qml" line="455"/>
+        <location filename="../assets/main.qml" line="352"/>
+        <location filename="../assets/main.qml" line="528"/>
         <source>None Selected.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="149"/>
-        <location filename="../assets/main.qml" line="160"/>
+        <location filename="../assets/main.qml" line="150"/>
+        <location filename="../assets/main.qml" line="161"/>
         <source>No gallery imported, file not valid.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="157"/>
+        <location filename="../assets/main.qml" line="158"/>
         <source>Data imported successfully.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="251"/>
-        <location filename="../assets/main.qml" line="384"/>
-        <location filename="../assets/main.qml" line="523"/>
-        <source>%1 posts</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../assets/main.qml" line="330"/>
-        <location filename="../assets/main.qml" line="470"/>
+        <location filename="../assets/main.qml" line="367"/>
+        <location filename="../assets/main.qml" line="543"/>
         <source>None selected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="261"/>
-        <location filename="../assets/main.qml" line="396"/>
-        <location filename="../assets/main.qml" line="535"/>
+        <location filename="../assets/main.qml" line="286"/>
+        <location filename="../assets/main.qml" line="457"/>
+        <location filename="../assets/main.qml" line="632"/>
         <source>View</source>
         <translation type="unfinished"></translation>
     </message>

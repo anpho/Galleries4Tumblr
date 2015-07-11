@@ -62,7 +62,7 @@ QtObject {
                 }
             }, [], false);
     }
-    function getLastUpdate(sitename, indexpath, callback) {
+    function getLastUpdate(sitename, callback) {
         if (sitename == "") {
             callback(indexpath, false, qsTr("site name not given."))
         }
@@ -72,12 +72,14 @@ QtObject {
                     var msgbody = JSON.parse(r['data']);
                     if (msgbody.meta.status == 200) {
                         var lastupdate = msgbody.response.blog.updated;
-                        callback(indexpath, true, calcDateInteval(lastupdate), msgbody.response.blog.posts)
+                        var imagearray = msgbody.response.posts[0].photos[0].alt_sizes;
+                        var firstimage = imagearray[imagearray.length - 1].url;
+                        callback(firstimage, true, calcDateInteval(lastupdate), msgbody.response.blog.posts)
                     } else {
-                        callback(indexpath, false, qsTr("Invalid API result"), -1);
+                        callback("", false, qsTr("Invalid API result"), -1);
                     }
                 } else {
-                    callback(indexpath, false, qsTr("Network error."), -1)
+                    callback("", false, qsTr("Network error."), -1)
                 }
             }, [], false)
     }

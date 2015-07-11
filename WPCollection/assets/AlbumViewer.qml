@@ -51,13 +51,13 @@ ListView {
             onAtEndChanged: {
                 if (atEnd) {
                     if (! autoloadnextpage && (total > 0)) {
-                        if (navroot && !navroot.unlocked){
-                            sst.body=qsTr("Unlock to see more.")
+                        if (navroot && ! navroot.unlocked) {
+                            sst.body = qsTr("Unlock to see more.")
                             sst.show();
                         }
                         return;
                     }
-                    if (! loading && endpoint.trim().length !=0) {
+                    if (! loading && endpoint.trim().length != 0) {
                         loading = true;
                         pageDataSource.load();
                     }
@@ -92,7 +92,6 @@ ListView {
                             } else if (gifregexp.test(wallpaper_item.original_size.url)) {
                                 continue;
                             }
-
                             wallpapers_array.push(wallpaper_item)
                         }
                     }
@@ -116,12 +115,16 @@ ListView {
             id: ssd
             title: qsTr("Error")
             includeRememberMe: false
-            rememberMeChecked: false
-            customButton.enabled: false
-            cancelButton.enabled: false
+            cancelButton.enabled: true
             onFinished: {
-                navroot.pop()
+                if (value == SystemUiResult.ConfirmButtonSelection) {
+                    console.log("RETRY PRESSED")
+                    loading = true
+                    pageDataSource.load();
+                }
             }
+            confirmButton.enabled: true
+            confirmButton.label: qsTr("Retry")
         }
     ]
     layout: GridListLayout {

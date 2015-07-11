@@ -17,6 +17,7 @@
 import bb.cascades 1.2
 import bb.system 1.2
 import bb.cascades.pickers 1.0
+import org.labsquare 1.0
 NavigationPane {
     Menu.definition: MenuDefinition {
         helpAction: HelpActionItem {
@@ -51,7 +52,7 @@ NavigationPane {
         if (navigationPane.top != basepage) {
             Application.menuEnabled = false;
         }
-
+        // disable application menu.
     }
     onPopTransitionEnded: {
         // Destroy the popped Page once the back transition has ended.
@@ -208,79 +209,115 @@ NavigationPane {
         ]
         actionBarVisibility: ChromeVisibility.Hidden
         Container {
-            ControlDelegate {
-                delegateActive: opdef.selected
-                sourceComponent: ComponentDefinition {
-                    ListView {
-                        dataModel: XmlDataModel {
-                            source: "asset:///tumblr.xml"
-                            id: xdm
-                        }
-                        onTriggered: {
-                            var dataitem = xdm.data(indexPath);
-                            console.log(JSON.stringify(dataitem));
-                            var sitepage = Qt.createComponent("Site.qml").createObject(navigationPane);
-                            sitepage.nav = navigationPane;
-                            sitepage.endpoint = dataitem.host;
-                            navigationPane.push(sitepage)
-                        }
-                        function addToFav(obj) {
-                            myfavs.add(obj)
-                        }
-                        function getlastupdate(host, indexpath, callback) {
-                            co.getLastUpdate(host, indexpath, callback)
-                        }
-                        listItemComponents: [
-                            ListItemComponent {
-                                type: "header"
-                                content: Header {
-                                    title: ListItemData.title
-                                }
-                            },
-                            ListItemComponent {
-                                type: "item"
-                                StandardListItem {
-                                    id: itemroot
-                                    title: ListItemData.title
-                                    description: ListItemData.host
-                                    imageSource: ListItemData.gif == true ? "asset:///images/GIF_ON.png" : "asset:///images/GIF_OFF.png"
+            Container {
+                visible: opdef.selected
+                ListView {
+                    dataModel: XmlDataModel {
+                        source: "asset:///tumblr.xml"
+                        id: xdm
+                    }
+                    onTriggered: {
+                        var dataitem = xdm.data(indexPath);
+                        console.log(JSON.stringify(dataitem));
+                        var sitepage = Qt.createComponent("Site.qml").createObject(navigationPane);
+                        sitepage.nav = navigationPane;
+                        sitepage.endpoint = dataitem.host;
+                        navigationPane.push(sitepage)
+                    }
+                    function addToFav(obj) {
+                        myfavs.add(obj)
+                    }
+                    function getlastupdate(host, callback) {
+                        co.getLastUpdate(host, callback)
+                    }
+                    listItemComponents: [
+                        ListItemComponent {
+                            type: "header"
+                            content: Header {
+                                title: ListItemData.title
+                            }
+                        },
+                        ListItemComponent {
+                            type: "item"
+                            Container {
+                                id: itemroot
+                                WebImageView {
+                                    imageSource: "asset:///images/loading.gif"
                                     onCreationCompleted: {
-                                        itemroot.ListItem.view.getlastupdate(ListItemData.host, itemroot.ListItem.indexPath, function(j, b, d, posts) {
+                                        itemroot.ListItem.view.getlastupdate(ListItemData.host, function(j, b, d, posts) {
                                                 if (b) {
-                                                    itemroot.description = qsTr("Updated %1").arg(d)
-                                                    itemroot.status = qsTr("%1 posts").arg(posts)
+                                                    url = j
                                                 } else {
-                                                    itemroot.description = d;
                                                 }
                                             })
                                     }
-                                    contextActions: [
-                                        ActionSet {
-                                            actions: [
-                                                ActionItem {
-                                                    title: qsTr("View")
-                                                    imageSource: "asset:///icon/ic_all.png"
-                                                    onTriggered: {
-                                                        itemroot.ListItem.view.triggered(itemroot.ListItem.indexPath)
-                                                    }
-                                                },
-                                                ActionItem {
-                                                    title: qsTr("Add to Favourite")
-                                                    imageSource: "asset:///icon/ic_add_bookmarks.png"
-                                                    onTriggered: {
-                                                        itemroot.ListItem.view.addToFav(ListItemData)
-                                                    }
+                                    verticalAlignment: VerticalAlignment.Fill
+                                    horizontalAlignment: HorizontalAlignment.Fill
+                                    scalingMethod: ScalingMethod.AspectFill
+                                }
+                                Container {
+                                    background: Color.Black
+                                    verticalAlignment: VerticalAlignment.Bottom
+                                    horizontalAlignment: HorizontalAlignment.Fill
+                                    topPadding: 5.0
+                                    leftPadding: 5.0
+                                    rightPadding: 5.0
+                                    bottomPadding: 5.0
+                                    opacity: 0.6
+                                    Label {
+                                        multiline: true
+                                        textStyle.fontSize: FontSize.XSmall
+                                        textStyle.fontWeight: FontWeight.W100
+                                        textStyle.color: Color.White
+                                        textFit.mode: LabelTextFitMode.Standard
+                                        textStyle.textAlign: TextAlign.Center
+                                        horizontalAlignment: HorizontalAlignment.Fill
+                                        verticalAlignment: VerticalAlignment.Center
+                                        id: itemlabel
+                                        text: ListItemData.title
+                                        autoSize.maxLineCount: 2
+                                    }
+                                }
+
+                                contextActions: [
+                                    ActionSet {
+                                        actions: [
+                                            ActionItem {
+                                                title: qsTr("View")
+                                                imageSource: "asset:///icon/ic_all.png"
+                                                onTriggered: {
+                                                    itemroot.ListItem.view.triggered(itemroot.ListItem.indexPath)
                                                 }
-                                            ]
-                                        }
-                                    ]
+                                            },
+                                            ActionItem {
+                                                title: qsTr("Add to Favourite")
+                                                imageSource: "asset:///icon/ic_add_bookmarks.png"
+                                                onTriggered: {
+                                                    itemroot.ListItem.view.addToFav(ListItemData)
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                                layout: DockLayout {
 
                                 }
+
                             }
-                        ]
+                        }
+                    ]
+                    layout: GridListLayout {
+                        columnCount: 4
+                        headerMode: ListHeaderMode.Sticky
+                        orientation: LayoutOrientation.TopToBottom
+
                     }
+                    bufferedScrollingEnabled: true
+                    snapMode: SnapMode.LeadingEdge
+                    scrollIndicatorMode: ScrollIndicatorMode.ProportionalBar
                 }
             }
+
             Container {
                 visible: opfav.selected
                 onVisibleChanged: {
@@ -298,8 +335,8 @@ NavigationPane {
                     multiSelectAction: MultiSelectActionItem {
 
                     }
-                    function getlastupdate(host, indexpath, callback) {
-                        co.getLastUpdate(host, indexpath, callback)
+                    function getlastupdate(host, callback) {
+                        co.getLastUpdate(host, callback)
                     }
                     multiSelectHandler {
                         actions: DeleteActionItem {
@@ -373,19 +410,43 @@ NavigationPane {
                     listItemComponents: [
                         ListItemComponent {
                             type: ""
-                            StandardListItem {
+                            Container {
                                 id: favitem
-                                title: ListItemData.title
-                                imageSource: ListItemData.gif == true ? "asset:///images/GIF_ON.png" : "asset:///images/GIF_OFF.png"
-                                onCreationCompleted: {
-                                    favitem.ListItem.view.getlastupdate(ListItemData.host, favitem.ListItem.indexPath, function(j, b, d, posts) {
-                                            if (b) {
-                                                favitem.description = qsTr("Updated %1").arg(d)
-                                                favitem.status = qsTr("%1 posts").arg(posts)
-                                            } else {
-                                                favitem.description = d;
-                                            }
-                                        })
+                                WebImageView {
+                                    imageSource: "asset:///images/loading.gif"
+                                    onCreationCompleted: {
+                                        favitem.ListItem.view.getlastupdate(ListItemData.host, function(j, b, d, posts) {
+                                                if (b) {
+                                                    url = j
+                                                } else {
+                                                }
+                                            })
+                                    }
+                                    verticalAlignment: VerticalAlignment.Fill
+                                    horizontalAlignment: HorizontalAlignment.Fill
+                                    scalingMethod: ScalingMethod.AspectFill
+                                }
+                                Container {
+                                    background: Color.Black
+                                    verticalAlignment: VerticalAlignment.Bottom
+                                    horizontalAlignment: HorizontalAlignment.Fill
+                                    topPadding: 5.0
+                                    leftPadding: 5.0
+                                    rightPadding: 5.0
+                                    bottomPadding: 5.0
+                                    opacity: 0.6
+                                    Label {
+                                        multiline: true
+                                        textStyle.fontSize: FontSize.XSmall
+                                        textStyle.fontWeight: FontWeight.W100
+                                        textStyle.color: Color.White
+                                        textFit.mode: LabelTextFitMode.Standard
+                                        textStyle.textAlign: TextAlign.Center
+                                        horizontalAlignment: HorizontalAlignment.Fill
+                                        verticalAlignment: VerticalAlignment.Center
+                                        text: ListItemData.title
+                                        autoSize.maxLineCount: 2
+                                    }
                                 }
                                 contextActions: [
                                     ActionSet {
@@ -407,7 +468,9 @@ NavigationPane {
                                         ]
                                     }
                                 ]
-                                status: ListItemData.gif == true ? "GIF" : ""
+                                layout: DockLayout {
+
+                                }
                             }
                         }
                     ]
@@ -419,6 +482,16 @@ NavigationPane {
                         sitepage.enableGif = dataitem.gif;
                         navigationPane.push(sitepage)
                     }
+                    layout: GridListLayout {
+                        columnCount: 4
+                        headerMode: ListHeaderMode.None
+                        orientation: LayoutOrientation.TopToBottom
+                        cellAspectRatio: 1.0
+
+                    }
+                    bufferedScrollingEnabled: true
+                    snapMode: SnapMode.LeadingEdge
+                    scrollIndicatorMode: ScrollIndicatorMode.ProportionalBar
                 }
                 // FAV END
             }
@@ -438,8 +511,8 @@ NavigationPane {
                     multiSelectAction: MultiSelectActionItem {
 
                     }
-                    function getlastupdate(host, indexpath, callback) {
-                        co.getLastUpdate(host, indexpath, callback)
+                    function getlastupdate(host, callback) {
+                        co.getLastUpdate(host, callback)
                     }
                     multiSelectHandler {
                         actions: DeleteActionItem {
@@ -512,19 +585,43 @@ NavigationPane {
                     listItemComponents: [
                         ListItemComponent {
                             type: ""
-                            StandardListItem {
+                            Container {
                                 id: siteitem
-                                title: ListItemData.title
-                                imageSource: ListItemData.gif == true ? "asset:///images/GIF_ON.png" : "asset:///images/GIF_OFF.png"
-                                onCreationCompleted: {
-                                    siteitem.ListItem.view.getlastupdate(ListItemData.host, siteitem.ListItem.indexPath, function(j, b, d, posts) {
-                                            if (b) {
-                                                siteitem.description = qsTr("Updated %1").arg(d)
-                                                siteitem.status = qsTr("%1 posts").arg(posts)
-                                            } else {
-                                                siteitem.description = d;
-                                            }
-                                        })
+                                WebImageView {
+                                    imageSource: "asset:///images/loading.gif"
+                                    onCreationCompleted: {
+                                        siteitem.ListItem.view.getlastupdate(ListItemData.host, function(j, b, d, posts) {
+                                                if (b) {
+                                                    url = j
+                                                } else {
+                                                }
+                                            })
+                                    }
+                                    verticalAlignment: VerticalAlignment.Fill
+                                    horizontalAlignment: HorizontalAlignment.Fill
+                                    scalingMethod: ScalingMethod.AspectFill
+                                }
+                                Container {
+                                    background: Color.Black
+                                    verticalAlignment: VerticalAlignment.Bottom
+                                    horizontalAlignment: HorizontalAlignment.Fill
+                                    topPadding: 5.0
+                                    leftPadding: 5.0
+                                    rightPadding: 5.0
+                                    bottomPadding: 5.0
+                                    opacity: 0.6
+                                    Label {
+                                        multiline: true
+                                        textStyle.fontSize: FontSize.XSmall
+                                        textStyle.fontWeight: FontWeight.W100
+                                        textStyle.color: Color.White
+                                        textFit.mode: LabelTextFitMode.Standard
+                                        textStyle.textAlign: TextAlign.Center
+                                        horizontalAlignment: HorizontalAlignment.Fill
+                                        verticalAlignment: VerticalAlignment.Center
+                                        text: ListItemData.title
+                                        autoSize.maxLineCount: 2
+                                    }
                                 }
                                 contextActions: [
                                     ActionSet {
@@ -546,7 +643,9 @@ NavigationPane {
                                         ]
                                     }
                                 ]
-                                status: ListItemData.gif == true ? "GIF" : ""
+                                layout: DockLayout {
+
+                                }
                             }
                         }
                     ]
@@ -558,6 +657,16 @@ NavigationPane {
                         sitepage.enableGif = dataitem.gif;
                         navigationPane.push(sitepage)
                     }
+                    layout: GridListLayout {
+                        columnCount: 4
+                        headerMode: ListHeaderMode.None
+                        orientation: LayoutOrientation.TopToBottom
+                        cellAspectRatio: 1.0
+
+                    }
+                    bufferedScrollingEnabled: true
+                    snapMode: SnapMode.LeadingEdge
+                    scrollIndicatorMode: ScrollIndicatorMode.ProportionalBar
                 }
             }
         }
