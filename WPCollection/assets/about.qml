@@ -101,23 +101,6 @@ Page {
                     textStyle.textAlign: TextAlign.Justify
                 }
             }
-            Header {
-                title: qsTr("DISCLAIMER")
-            }
-            Container {
-                leftPadding: 20.0
-                topPadding: 20.0
-                rightPadding: 20.0
-                horizontalAlignment: HorizontalAlignment.Fill
-                bottomPadding: 20.0
-                Label {
-                    multiline: true
-                    text: qsTr("Tumblr is an user-generated community, make sure you're above 18 when adding NSFW galleries. This app can't figure out how old you are or is it illegal for you to browser certain galleries.")
-                    textStyle.fontWeight: FontWeight.W100
-                    textFit.mode: LabelTextFitMode.FitToBounds
-                    textStyle.textAlign: TextAlign.Justify
-                }
-            }
         }
     }
 }

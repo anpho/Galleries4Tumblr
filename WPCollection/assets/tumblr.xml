@@ -1,34 +1,33 @@
 <root>
 	<header title="BlackBerry">
-		<item gif="false" title="BlackBerry Wallpapers 1" host="blackberrywallpapers.tumblr.com" />
-		<item gif="false" title="BlackBerry Wallpapers 2" host="blackberry10wallpapers.tumblr.com" />
+		<item gif="false" title="BlackBerry Wallpapers" host="blackberrywallpapers.tumblr.com" />
+		<item gif="false" title="BlackBerry 10 Wallpapers" host="blackberry10wallpapers.tumblr.com" />
 		<item gif="false" title="BlackBerry Z10 Wallpapers" host="blackberryz10walls.tumblr.com" />
 	</header>
 	<header title="Abstract">
 		<item gif="false" title="Colorful Gradients" host="colorfulgradients.tumblr.com" />
-		<item gif="false" title="Colorful Gradients 2" host="gradientoftheday.tumblr.com" />
+		<item gif="false" title="Gradients of the day" host="gradientoftheday.tumblr.com" />
 	</header>
 	<header title="Anime">
-		<item gif="false" title="Anime Girls" host="animefangirl00.tumblr.com" />
+		<item gif="false" title="Anime Fan Girls" host="animefangirl00.tumblr.com" />
 		<item gif="false" title="Baka Backgrounds" host="bakabackgrounds.tumblr.com" />
 		<item gif="false" title="Comrade Wallpapers" host="comradewallpapers.tumblr.com" />
 		<item gif="false" title="Anime Art and Stuff" host="mirajanestrauss987.tumblr.com" />
 		<item gif="false" title="Anime No Desu" host="animend.tumblr.com" />
-		<item gif="false" title="Daily Wallpapers" host="wallpaperaday.tumblr.com" />
+		<item gif="false" title="Wallpaper a day" host="wallpaperaday.tumblr.com" />
 		<item gif="false" title="Anime Wallpapers" host="anime-wallpapers.tumblr.com" />
-		<item gif="false" title="Anime Wallpapers 2" host="animefangirl00.tumblr.com" />
 		<item gif="false" title="Kawaii and More" host="kawaiiandmoe.tumblr.com" />
 		<item gif="false" title="Kawaii Love" host="kawaii-blog-love.tumblr.com" />
 	</header>
 	<header title="Archived">
-		<item gif="false" title="iPhone wallpapers 1" host="iphonefivewallpapers.tumblr.com"/>
-		<item gif="false" title="iPhone wallpapers 2" host="iphone5-wallpaper.tumblr.com"/>
+		<item gif="false" title="iPhone 5 wallpapers 1" host="iphonefivewallpapers.tumblr.com"/>
+		<item gif="false" title="iPhone 5 wallpapers 2" host="iphone5-wallpaper.tumblr.com"/>
 		<item gif="false" title="Retina Wallpaper" host="retinawallpaper.tumblr.com"/>
-		<item gif="false" title="Stylized wallpapers" host="istylized.tumblr.com"/>
-		<item gif="false" title="HD wallpapers" host="hdwallpaper.tumblr.com" />
+		<item gif="false" title="iStylized" host="istylized.tumblr.com"/>
+		<item gif="false" title="HD wallpaper" host="hdwallpaper.tumblr.com" />
 	</header>
 		<header title="Art">
-		<item gif="false" title="Faco Lockscreens" host="lockscreens-homescreens.tumblr.com"/>
+		<item gif="false" title="Lockscreens" host="lockscreens-homescreens.tumblr.com"/>
 		<item gif="false" title="Courtney's arts" host="qrtrs.tumblr.com"/>
 		<item gif="false" title="Philippe Poirier" host="philippepoirierart.tumblr.com" />
 		<item gif="false" title="Vintage" host="vintageitalia.tumblr.com" />
@@ -42,7 +41,7 @@
 		<item gif="false" title="Aerial Images" host="aerialwallpapers.tumblr.com"/>
 		<item gif="false" title="Sagea's Little World" host="sagea-then.tumblr.com"/>
 		<item gif="false" title="Space Wallpapers" host="space-wallpapers.tumblr.com"/>
-		<item gif="false" title="Wallpaper* Magazine" host="wallpapermag.tumblr.com"/>
+		<item gif="false" title="Wallpaper Mag" host="wallpapermag.tumblr.com"/>
 		<item gif="false" title="All Things Europe" host="allthingseurope.tumblr.com" />
 		<item gif="false" title="Wave Motions" host="wavemotions.tumblr.com"/>
 		<item gif="false" title="Sit Outside" host="sitoutside.tumblr.com" />
@@ -65,14 +64,12 @@
 		<item gif="false" title="Wallpaper FAN" host="kyuubi22.tumblr.com"/>
 		<item gif="false" title="Wide Wallpapers" host="macpapers.tumblr.com" />
 		<item gif="false" title="Random Lockscreens" host="fuckscreens.tumblr.com" />
-		<item gif="false" title="iPhone Wallpapers 1" host="backgrounds-iphone.tumblr.com"/>
-		<item gif="false" title="iPhone Wallpapers 2" host="iphonebackground.tumblr.com"/>
-		<item gif="false" title="iPhone Wallpapers 3" host="sneple.tumblr.com"/>
-		<item gif="false" title="iPhone Wallpapers 4" host="teenage-iphone-wallpaper.tumblr.com"/>
-		<item gif="false" title="iPhone Wallpapers 5" host="tumblr.1iphone6wallpaper.com"/>
-		<item gif="false" title="iPhone Wallpapers 6" host="iphonewallpapers.tumblr.com" />
+		<item gif="false" title="Backgrounds" host="backgrounds-iphone.tumblr.com"/>
+		<item gif="false" title="iPhone Wallpapers" host="iphonebackground.tumblr.com"/>
+		<item gif="false" title="sneple" host="sneple.tumblr.com"/>
+		<item gif="false" title="teenage Wallpapers" host="teenage-iphone-wallpaper.tumblr.com"/>
+		<item gif="false" title="iPhone 6 Wallpapers" host="tumblr.1iphone6wallpaper.com"/>
 		<item gif="false" title="Paradox Wallpapers" host="parallax-wallpapers.com"/>
-		<item gif="false" title="Lyrics on background" host="misslyrica.tumblr.com"/>
 		<item gif="false" title="Best Lockscreens" host="bestlockscreens.tumblr.com"/>
 	</header>
 </root>

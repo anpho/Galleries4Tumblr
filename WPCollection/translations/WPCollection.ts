@@ -199,11 +199,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/about.qml" line="115"/>
-        <source>Tumblr is an user-generated community, make sure you&apos;re above 18 when adding NSFW galleries. This app can&apos;t figure out how old you are or is it illegal for you to browser certain galleries.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../assets/about.qml" line="15"/>
         <source>Feedback</source>
         <translation type="unfinished"></translation>
@@ -239,11 +234,6 @@ Unlocked version benifits:
         <source>All images / animated gifs are copyrighted by the original author, this app is a customized tumblr client designed to browse the largest picture community and provide native experiences to BlackBerry 10 users.</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <location filename="../assets/about.qml" line="105"/>
-        <source>DISCLAIMER</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>main</name>
@@ -264,8 +254,8 @@ Unlocked version benifits:
     </message>
     <message>
         <location filename="../assets/main.qml" line="91"/>
-        <location filename="../assets/main.qml" line="506"/>
-        <location filename="../assets/main.qml" line="628"/>
+        <location filename="../assets/main.qml" line="504"/>
+        <location filename="../assets/main.qml" line="626"/>
         <source>My Galleries</source>
         <translation type="unfinished"></translation>
     </message>
@@ -307,40 +297,40 @@ Unlocked version benifits:
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="293"/>
+        <location filename="../assets/main.qml" line="291"/>
         <source>Add to Favourite</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="329"/>
+        <location filename="../assets/main.qml" line="327"/>
         <source>My Favourites</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/main.qml" line="361"/>
+        <location filename="../assets/main.qml" line="537"/>
+        <source> galleries selected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../assets/main.qml" line="363"/>
         <location filename="../assets/main.qml" line="539"/>
-        <source> galleries selected</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../assets/main.qml" line="365"/>
-        <location filename="../assets/main.qml" line="541"/>
         <source>1 gallery selected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="374"/>
+        <location filename="../assets/main.qml" line="372"/>
         <source>%1 added to Favourites.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="453"/>
+        <location filename="../assets/main.qml" line="451"/>
         <source>My Favourite</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="352"/>
-        <location filename="../assets/main.qml" line="528"/>
+        <location filename="../assets/main.qml" line="350"/>
+        <location filename="../assets/main.qml" line="526"/>
         <source>None Selected.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -356,15 +346,15 @@ Unlocked version benifits:
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="367"/>
-        <location filename="../assets/main.qml" line="543"/>
+        <location filename="../assets/main.qml" line="365"/>
+        <location filename="../assets/main.qml" line="541"/>
         <source>None selected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="286"/>
-        <location filename="../assets/main.qml" line="457"/>
-        <location filename="../assets/main.qml" line="632"/>
+        <location filename="../assets/main.qml" line="284"/>
+        <location filename="../assets/main.qml" line="455"/>
+        <location filename="../assets/main.qml" line="630"/>
         <source>View</source>
         <translation type="unfinished"></translation>
     </message>

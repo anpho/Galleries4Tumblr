@@ -265,8 +265,7 @@ NavigationPane {
                                     bottomPadding: 5.0
                                     opacity: 0.6
                                     Label {
-                                        multiline: true
-                                        textStyle.fontSize: FontSize.XSmall
+                                        textStyle.fontSize: FontSize.XXSmall
                                         textStyle.fontWeight: FontWeight.W100
                                         textStyle.color: Color.White
                                         textFit.mode: LabelTextFitMode.Standard
@@ -275,7 +274,6 @@ NavigationPane {
                                         verticalAlignment: VerticalAlignment.Center
                                         id: itemlabel
                                         text: ListItemData.title
-                                        autoSize.maxLineCount: 2
                                     }
                                 }
 
