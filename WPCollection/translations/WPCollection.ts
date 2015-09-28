@@ -199,11 +199,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/about.qml" line="15"/>
-        <source>Feedback</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../assets/about.qml" line="62"/>
         <source>Free version has these limits:
 - Can only view about 40 images of each gallery.
@@ -212,6 +207,11 @@ Unlocked version benifits:
 - View all images in gallery
 - Add customized tumblr sites to My Galleries with / without GIF enabled.
 - Import / Export My Galleries, share with your friends.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/about.qml" line="15"/>
+        <source>Feedback</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
